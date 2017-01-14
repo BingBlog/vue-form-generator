@@ -74,7 +74,6 @@ div
 							res.push(field);
 					});
 				}
-
 				return res;
 			}
 		},

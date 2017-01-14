@@ -20,11 +20,11 @@ export default {
 
 				if (isFunction(this.formatValueToField))
 					val = this.formatValueToField(val);
-
 				return val;
 			},
 
 			set(newValue) {
+				console.log(newValue);
 				// console.log("Model value changed!", newValue);
 				if (isFunction(this.formatValueToModel))
 					newValue = this.formatValueToModel(newValue);

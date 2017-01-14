@@ -23,6 +23,9 @@
 	import abstractField from "./abstractField";
 	
 	export default {
+		created(){
+			console.log(this.value);
+		},
 		mixins: [ abstractField ],
 
 		data() {

@@ -55,7 +55,6 @@
 					console.warn("Pikaday is missing. Please download from https://github.com/dbushell/Pikaday/ and load the script and CSS in the HTML head section!");
 				}
 			});
-
 		},
 
 		beforeDestroy() {

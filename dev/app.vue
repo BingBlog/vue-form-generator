@@ -58,7 +58,104 @@
 
 				selected: [],
 
-				model: null,
+				model: {
+						"firstName": "Everett",
+						"lastName": "Jerde",
+						"userName": "everett31",
+						"password": "xunepitiza",
+						"email": "everett.jerde38@hotmail.com",
+						"phone": "(705) 578-4488 x97201",
+						"dob": 825362307263,
+						dobTime:825362307263,
+						"website": "https://kim.net",
+						"ip": "237.175.102.82",
+						"avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/cybind/128.jpg",
+						"gravatar": "https://www.gravatar.com/avatar/637633cb8066e92da682eb477cab009f",
+						"address": {
+							"country": "Australia",
+							"countryCode": "AU",
+							"state": "Maine",
+							"city": "O'Keefemouth",
+							"street": "2967 Angelo Skyway Apt. 911",
+							"zip": "90678-4449",
+							"geo": {
+								"latitude": -57.6959,
+								"longitude": 102.69299999999998
+							}
+						},
+						"status": true,
+						"id": 5,
+						"type": "business",
+						"bio": "Aut non et sequi repudiandae. Quae ex et. Consectetur quia voluptatibus.",
+						"time": "11:56:12",
+						"age": 21,
+						"rank": 10,
+						"role": "visitor",
+						"sex": "female",
+						"skills": [
+							"CSS3",
+							"CoffeeScript"
+						],
+						"language": "en-US",
+						"created": 1483104494121,
+						"dt": 1482553478870,
+						"favoriteColor": "#322180",
+						"color": "#7d6457",
+						"stars": [
+							{
+								name:"wangbing",
+								value:"1",
+								img:'https://s3.amazonaws.com/uifaces/faces/twitter/al_li/128.jpg'
+							},
+							{
+								name:"songmeng",
+								value:"2",
+								img:'https://s3.amazonaws.com/uifaces/faces/twitter/al_li/128.jpg'
+							}
+						],
+                        "editStars": [
+                            {
+                                name:"wangbing",
+                                value:"1",
+                                img:'https://s3.amazonaws.com/uifaces/faces/twitter/al_li/128.jpg',
+                                role:'孙悟空'
+                            },
+                            {
+                                name:"songmeng",
+                                value:"2",
+                                img:'https://s3.amazonaws.com/uifaces/faces/twitter/al_li/128.jpg',
+                                role:'猪八戒'
+                            }
+                        ],
+						"tags": [
+							'wangbing',
+							'songmeng',
+							'liangshan'
+						],
+						"company": {
+							"name": "Beatty-Heller Corp.",
+							"email": "beatty-heller-corp.jakubowski72@gmail.com",
+							"phone": "(391) 384-3232 x2148",
+							"website": "http://allanlockman.eu",
+							"ip": "39.110.207.21",
+							"address": {
+								"country": "Samoa",
+								"countryCode": "WS",
+								"state": "Idaho",
+								"city": "Laurenmouth",
+								"street": "69495 Marion Route",
+								"zip": "48204",
+								"geo": {
+									"latitude": -15.876900000000006,
+									"longitude": -7.9238
+								}
+							}
+						},
+						"income": [
+							1323,
+							87145
+						]
+					},
 
 				rows: users,
 
@@ -195,17 +292,17 @@
 		},
 		
 		mounted() {
-			this.$nextTick(function () {
-				window.app = this;
+			// this.$nextTick(function () {
+			// 	window.app = this;
 
-				if (users.length > 0) {
-					this.selectRow(null, fakerator.random.arrayElement(users));
-				}
+			// 	if (users.length > 0) {
+			// 		this.selectRow(null, fakerator.random.arrayElement(users));
+			// 	}
 
-				// Localize validate errors
-				// VueFormGenerator.validators.resources.fieldIsRequired = "Ezt a mezőt kötelező kitölteni!";
-				// VueFormGenerator.validators.resources.textTooSmall = "A szöveg túl rövid! Jelenleg: {0}, minimum: {1}";
-			})
+			// 	// Localize validate errors
+			// 	// VueFormGenerator.validators.resources.fieldIsRequired = "Ezt a mezőt kötelező kitölteni!";
+			// 	// VueFormGenerator.validators.resources.textTooSmall = "A szöveg túl rövid! Jelenleg: {0}, minimum: {1}";
+			// })
 		}
 	}
 

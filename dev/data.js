@@ -43,11 +43,12 @@ module.exports = {
 			user.favoriteColor = "#" + fakerator.internet.color();
 			user.color = "#" + fakerator.internet.color();
 
+			user.starName = ['wangbing','songmeng'];	
+
 			if (user.type == "business")
 				user.company = fakerator.entity.company();
 			
-			user.income = [ fakerator.random.number(50000), fakerator.random.number(50000, 100000)];			
-
+			user.income = [ fakerator.random.number(50000), fakerator.random.number(50000, 100000)];
 			res.push(user);
 			// console.log(user);
 		}

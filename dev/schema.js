@@ -531,12 +531,12 @@ module.exports = {
 			}
 		}, {
 			type: "dateTimePicker",
-			label: "DOB (dateTimePicker field)",
-			model: "dob",
+			label: "DOB (dateTimePicker field)111111111111111",
+			model: "dobTime",
 			required: true,
 			placeholder: "User's birth of date",
 			min: moment("1900-01-01").toDate(),
-			max: moment("2016-01-01").toDate(),
+			max: moment("2018-01-01").toDate(),
 			validator: [
 				validators.date
 			],
@@ -728,57 +728,6 @@ module.exports = {
 			onChanged(model, newVal, oldVal, field) {
 				// model.age = moment().year() - moment(newVal).year();
 			}
-		}, {
-			type: "vueMultiSelect",
-			label: "Skills (vue-multiSelect field)",
-			model: "skills",
-			required: true,
-			multiSelect: true,
-			selectOptions: {
-				// id:25,
-				// key:"name",
-				// label: "name",
-				searchable: true,
-				clearOnSelect: true,
-				hideSelected: true,
-				// maxHeight:300,
-				// allowEmpty:true,
-				// resetAfter:false,
-				// closeOnSelect: true,
-				// customLabel:function(){return ""},
-				taggable: true,
-				tagPlaceholder: "tagPlaceholder",
-				onNewTag(newTag, id, options, value) {
-					console.log("onNewTag", newTag, id, options, value);
-					options.push(newTag);
-					value.push(newTag);
-				},
-				// showPointer: true,
-				onSearch(searchQuery, id, options) {
-					console.log("onSearch", searchQuery, id, options);
-				}
-				// selectLabel: "selectLabel",
-				// selectedLabel: "selectedLabel",
-				// deselectLabel: "deselectLabel",
-				// limit:2,
-				// limitText: count => `and ${count} more`,
-				// loading: false
-			},
-			values: [
-				"HTML5",
-				"Javascript",
-				"CSS3",
-				"CoffeeScript",
-				"AngularJS",
-				"ReactJS",
-				"VueJS"
-			],
-			onChanged(model, newVal, oldVal, field) {
-				console.log(`Model's name changed from ${oldVal} to ${newVal}. Model:`, model);
-			},
-			max: 4,
-			placeholder: "placeholder",
-			validator: validators.array
 		},
 
 		/*******************/
@@ -796,6 +745,65 @@ module.exports = {
 			label: "Awesome (custom field)",
 			model: "userName"
 		},
+
+		//自定义输入搜索
+		{
+			type: "input",
+			inputType: "url",
+			label: "URL",
+			model: "website",
+			placeholder: "Enter your website",
+			inputName: "website",
+			validator: validators.url
+		},
+		//自定义输入搜索
+		{
+			type: "SearchStars",
+			label: "异步搜索演员名称并选择",
+			model: "stars",
+			url:'1111111111111',//接口传入url值
+			featured: true,
+			placeholder: "输入演员姓名",
+			validator: validators.array
+		},
+		//自定义输入搜索演员并可编辑饰演信息
+		{
+			type: "SearchEditStars",
+			label: "异步搜索演员名称并选择",
+			model: "editStars",
+			url:'1111111111111',//接口传入url值
+			featured: true,
+			placeholder: "输入演员姓名",
+			validator: validators.array
+		},
+		//自定义输入搜索演员并可编辑饰演信息
+		{
+			type: "InputLabels",
+			label: "标签输入Enter增加",
+			model: "tags",
+			url:'1111111111111',//接口传入url值
+			featured: true,
+			placeholder: "",
+			validator: validators.array
+		},
+		{
+			type: "checklist",
+			label: "Skills(下拉选择)",
+			featured: true,//加粗显示label
+			model: "skills",
+			required: true,
+			listBox: true,
+			values: [
+				"HTML5",
+				"Javascript",
+				"CSS3",
+				"CoffeeScript",
+				"AngularJS",
+				"ReactJS",
+				"VueJS"
+			],
+			validator: validators.array
+		}
 
 		/****************/
 		/*  DEPRECATED  */
